@@ -1,3 +1,8 @@
+//! static_array2d provides an interface for 2d slices.
+//!
+//! It differs from `array2d` and `array2ds` by using the stack
+//! instead of the heap through rust's constant generics.
+
 #![no_std]
 /// A statically sized 2-dimensional array
 #[derive(Clone)]

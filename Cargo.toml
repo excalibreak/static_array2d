@@ -4,5 +4,7 @@ version = "0.1.0"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 description = "A no_std statically sized 2D array library."
+repository = "https://github.com/excalibreak/static_array2d"
+keywords = ["array", "grid", "2d"]
 
 [dependencies]

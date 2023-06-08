@@ -13,6 +13,14 @@ pub struct Grid<const W: usize, const H: usize, T> {
 /// A statically sized 2-dimensional array with equal width and height
 pub type SquareGrid<const W: usize, T> = Grid<W, W, T>;
 
+impl<const W: usize, const H: usize, T: Default + Copy> Default for Grid<W, H, T> {
+    fn default() -> Self {
+        Self {
+            data: [[T::default(); W]; H],
+        }
+    }
+}
+
 impl<const W: usize, const H: usize, T> From<[[T; W]; H]> for Grid<W, H, T> {
     fn from(value: [[T; W]; H]) -> Self {
         Self { data: value }
